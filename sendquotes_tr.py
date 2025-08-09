@@ -14,7 +14,10 @@ if not GEMINI_API_KEY:
 # Konfigurasi Gemini API
 client = genai.Client(api_key=GEMINI_API_KEY)
 
-NOMOR_TUJUAN = "+6285755196900"
+# Konfigurasi Nomor Tujuan
+NOMOR_TUJUAN = os.getenv("NOMOR_TUJUAN")
+if not NOMOR_TUJUAN:
+    raise ValueError("NOMOR_TUJUAN tidak ditemukan di file .env")
 
 def getQuote():
     try:  
@@ -43,6 +46,7 @@ def sendWa(nomor, pesan):
         print(f"Pesan telah dikirim ke {nomor} pada pukul {jam}:{menit}")
     except Exception as e:
         print(f"Gagal mengirim pesan: {e}")
+
 
 print(">>>>> Program Send Quotes Timothy Ronald by @irwancodes <<<<<")
 quote_to_send = getQuote()

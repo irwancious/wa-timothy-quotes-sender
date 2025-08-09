@@ -47,27 +47,21 @@ source venv/bin/activate
 # Di Windows:
 venv\Scripts\activate
 ```
-### 3. Konfigurasi Kunci API
-Buat file baru di dalam folder proyek bernama .env.
+### 3. Konfigurasi Kunci API dan Nomor Tujuan
+Buat file baru di dalam folder proyek bernama .env > isi dengan:
 ```bash
 GEMINI_API_KEY="PASTE_KUNCI_API_GEMINI_ANDA_DI_SINI"
-```
-
-### 4. Mengatur Nomor Telepon Tujuan
-Cari baris berikut di dalam kode sendquotes_tr.py dan ganti nomornya dengan nomor WhatsApp yang Anda inginkan, lalu save.
-
-```bash
-NOMOR_TUJUAN = "+6281234567890"  # Ganti dengan nomor WhatsApp tujuan Anda
+NOMOR_TUJUAN = "+6281234561890" # Ganti dengan nomor WhatsApp tujuan kamu
 ```
 > Pastikan format nomor telepon sudah benar, termasuk kode negara. Untuk Indonesia, gunakan +62 di depan.
 
-### 5. Instal Dependensi
+### 4. Instal Dependensi
 Dengan virtual environment yang sudah aktif, instal semua pustaka yang dibutuhkan dari requirements.txt.
 ```bash
 pip install -r requirements.txt
 ```
 
-### 6. Jalankan Program
+### 5. Jalankan Program
 Anda dapat menjalankan program secara manual untuk menguji fungsinya.
 ```bash
 python sendquotes_tr.py
